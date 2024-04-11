@@ -1,4 +1,4 @@
-import { User } from "./movielist.js";
+import { pelisCartelera} from "./movielist.js";
 
 const head = (title: string) => `
 <head>
@@ -34,26 +34,42 @@ const head = (title: string) => `
   </style>
 </head>`;
 
-const renderUsers = (users: Array<User>) => {
-  let html = "";
-  for (const user of users) {
-    html += `<div class="user">
-      <img src="${user.picture.medium}" />
-      <div class="data">
-        <div class="name">${user.fullName}</div>
-        <div class="email">${user.email}</div>
-      </div>
-    </div>`;
-  }
-  return html;
+// const renderUsers = (users: Array<User>) => {
+//   let html = "";
+//   for (const user of users) {
+//     html += `<div class="user">
+//       <img src="${user.picture.medium}" />
+//       <div class="data">
+//         <div class="name">${user.fullName}</div>
+//         <div class="email">${user.email}</div>
+//       </div>
+//     </div>`;
+//   }
+//   return html;
+// }
+
+// export const render = (users: Array<User>) => {
+//   return `
+// <html>
+//   ${head("User List")}
+//   <body>
+//     ${renderUsers(users)}
+//   </body>
+// </html>`;
+// };
+
+const movi = await pelisCartelera();
+//movi.forEach
+//posterPelicula = '';
+console.log(movi[0].original_title);
+
+function addTitle(movi){
+  let movieName = '';
+  movi.forEach(m => {
+  movieName += `<h1>${m.original_title}</h1>`
+});
+return movieName
 }
 
-export const render = (users: Array<User>) => {
-  return `
-<html>
-  ${head("User List")}
-  <body>
-    ${renderUsers(users)}
-  </body>
-</html>`;
-};
+  // console.log(m.original_title));
+console.log(movieName)
