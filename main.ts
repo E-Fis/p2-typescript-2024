@@ -1,8 +1,9 @@
 import { writeFile } from "fs/promises";
-import { addTitle } from "./render.js";
-import { pelisCartelera} from "./movielist.js";
+import { render } from "./render.js";
+
+
 
 //const users = await movielist();
-const html = addTitle();
+const html = render();
 await writeFile('index.html', html);
 

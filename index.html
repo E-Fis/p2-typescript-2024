@@ -1,0 +1,319 @@
+<html>
+  
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pel·lícules en cartellera</title>
+  <style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(10, 28, 58);;
+}
+.titulo{
+    position: fixed;
+    top: 0;
+    text-align: center;    
+    margin: 0rem 6rem 0rem 6rem;
+    border: #ffffff;
+    font-size: 3rem;
+    background: goldenrod;
+    color: #fffcfc;
+
+}
+.contenedor {
+    margin: 10rem 6rem 4rem 6rem;    
+}
+.contenedor .pelicula{
+    text-align: center;
+    color: goldenrod;
+    font-size: 20px;
+}
+.contenedor .pelicula .poster{
+    width: 25%;
+    margin-top: 10px;
+    border-radius: 15px;
+    
+}
+.paginacion {
+	position: fixed;
+    bottom: 0;
+	background: #ffffff;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+	padding: 8px;
+}
+
+.paginacion button {
+	cursor: pointer;
+	border: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	height: 50px;
+	width: 200px;
+	background: #241744;
+	color: #fff;
+	border-radius: 100px;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 600;
+
+}
+</style>
+</head>
+  <body>
+  <div class="titulo", id="titulo">
+        <h1>Pel·lícules en cartellera</h1>
+  </div>
+  <div class="contenedor" id="contenedor">
+  
+   <div class = "pelicula">
+            <img class = "poster" src = "https://image.tmdb.org/t/p/w500//1pdfLvkbY9ohJlCjQH2CZjjYVvJ.jpg"
+        </div>
+   <h3>Dune: Part Two</h3>
+   <div class = "pelicula">
+            <img class = "poster" src = "https://image.tmdb.org/t/p/w500//f7QBvIzoWSJw3jWPGnZBc5vwQ0l.jpg"
+        </div>
+   <h3>Kung Fu Panda 4</h3>
+   <div class = "pelicula">
+            <img class = "poster" src = "https://image.tmdb.org/t/p/w500//tMefBSflR6PGQLv7WvFPpKLZkyk.jpg"
+        </div>
+   <h3>Godzilla x Kong: The New Empire</h3>
+   <div class = "pelicula">
+            <img class = "poster" src = "https://image.tmdb.org/t/p/w500//bXi6IQiQDHD00JFio5ZSZOeRSBh.jpg"
+        </div>
+   <h3>Road House</h3>
+   <div class = "pelicula">
+            <img class = "poster" src = "https://image.tmdb.org/t/p/w500//jFK2ZLQUzo9pea0jfMCHDfvWsx7.jpg"
+        </div>
+   <h3>Le salaire de la peur</h3>
+   <div class = "pelicula">
+            <img class = "poster" src = "https://image.tmdb.org/t/p/w500//rULWuutDcN5NvtiZi4FRPzRYWSh.jpg"
+        </div>
+   <h3>Madame Web</h3>
+   <div class = "pelicula">
+            <img class = "poster" src = "https://image.tmdb.org/t/p/w500//n726fdyL1dGwt15bY7Nj3XOXc4Q.jpg"
+        </div>
+   <h3>Heart of the Hunter</h3>
+   <div class = "pelicula">
+            <img class = "poster" src = "https://image.tmdb.org/t/p/w500//ldfCF9RhR40mppkzmftxapaHeTo.jpg"
+        </div>
+   <h3>Migration</h3>
+   <div class = "pelicula">
+            <img class = "poster" src = "https://image.tmdb.org/t/p/w500//uoBHsxSgfc3PQsSn98RfnbePHOy.jpg"
+        </div>
+   <h3>Fabbricante di lacrime</h3>
+   <div class = "pelicula">
+            <img class = "poster" src = "https://image.tmdb.org/t/p/w500//9u6HEtZJdZDjPGGJq6YEuhPnoan.jpg"
+        </div>
+   <h3>Imaginary</h3>
+   <div class = "pelicula">
+            <img class = "poster" src = "https://image.tmdb.org/t/p/w500//AgHbB9DCE9aE57zkHjSmseszh6e.jpg"
+        </div>
+   <h3>Damsel</h3>
+   <div class = "pelicula">
+            <img class = "poster" src = "https://image.tmdb.org/t/p/w500//cIzk6GhxEZuweekGFXWEoAyuaMX.jpg"
+        </div>
+   <h3>The First Omen</h3>
+   <div class = "pelicula">
+            <img class = "poster" src = "https://image.tmdb.org/t/p/w500//hu40Uxp9WtpL34jv3zyWLb5zEVY.jpg"
+        </div>
+   <h3>No Way Up</h3>
+   <div class = "pelicula">
+            <img class = "poster" src = "https://image.tmdb.org/t/p/w500//8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg"
+        </div>
+   <h3>Oppenheimer</h3>
+   <div class = "pelicula">
+            <img class = "poster" src = "https://image.tmdb.org/t/p/w500//kCGlIMHnOm8JPXq3rXM6c5wMxcT.jpg"
+        </div>
+   <h3>Poor Things</h3>
+   <div class = "pelicula">
+            <img class = "poster" src = "https://image.tmdb.org/t/p/w500//h3jYanWMEJq6JJsCopy1h7cT2Hs.jpg"
+        </div>
+   <h3>Land of Bad</h3>
+   <div class = "pelicula">
+            <img class = "poster" src = "https://image.tmdb.org/t/p/w500//5qcHcoJL3otMwJPKnbV5M3a1jQd.jpg"
+        </div>
+   <h3>How to Date Billy Walsh</h3>
+   <div class = "pelicula">
+            <img class = "poster" src = "https://image.tmdb.org/t/p/w500//lbOyeiiRYAE6Nm2e7xiNAAaRwZB.jpg"
+        </div>
+   <h3>Baghead</h3>
+   <div class = "pelicula">
+            <img class = "poster" src = "https://image.tmdb.org/t/p/w500//fko8CPrnspewLXgFUlUkivyvpHX.jpg"
+        </div>
+   <h3>Megamind vs. the Doom Syndicate</h3>
+   <div class = "pelicula">
+            <img class = "poster" src = "https://image.tmdb.org/t/p/w500//vgJZSqKMXWDDx09iSIStGKfHMku.jpg"
+        </div>
+   <h3>Wish</h3>
+   <div class = "pelicula">
+            <img class = "poster" src = "https://image.tmdb.org/t/p/w500//sh7Rg8Er3tFcN9BpKIPOMvALgZd.jpg"
+        </div>
+   <h3>Civil War</h3>
+   <div class = "pelicula">
+            <img class = "poster" src = "https://image.tmdb.org/t/p/w500//j1Rjw6a62UwrbTNT0I3JzZnnCmr.jpg"
+        </div>
+   <h3>Arca de Noé</h3>
+   <div class = "pelicula">
+            <img class = "poster" src = "https://image.tmdb.org/t/p/w500//6faYaQyiBPhqAizldJKq21mIVaE.jpg"
+        </div>
+   <h3>Ghostbusters: Frozen Empire</h3>
+   <div class = "pelicula">
+            <img class = "poster" src = "https://image.tmdb.org/t/p/w500//A7EByudX0eOzlkQ2FIbogzyazm2.jpg"
+        </div>
+   <h3>The Beekeeper</h3>
+   <div class = "pelicula">
+            <img class = "poster" src = "https://image.tmdb.org/t/p/w500//7Bd4EUOqQDKZXA6Od5gkfzRNb0.jpg"
+        </div>
+   <h3>Freelance</h3>
+   <div class = "pelicula">
+            <img class = "poster" src = "https://image.tmdb.org/t/p/w500//f4oZTcfGrVTXKTWg157AwikXqmP.jpg"
+        </div>
+   <h3>君たちはどう生きるか</h3>
+   <div class = "pelicula">
+            <img class = "poster" src = "https://image.tmdb.org/t/p/w500//wdi9kEU4W2UeBTtdqOPZISGMtDR.jpg"
+        </div>
+   <h3>Ordinary Angels</h3>
+   <div class = "pelicula">
+            <img class = "poster" src = "https://image.tmdb.org/t/p/w500//kUX5ourGUJDG0yvEeS3uooZS0dS.jpg"
+        </div>
+   <h3>Música</h3>
+   <div class = "pelicula">
+            <img class = "poster" src = "https://image.tmdb.org/t/p/w500//uZfxNBZam3VJxen7XTVzd4FVJZ8.jpg"
+        </div>
+   <h3>The American Society of Magical Negroes</h3>
+   <div class = "pelicula">
+            <img class = "poster" src = "https://image.tmdb.org/t/p/w500//3xpBWiQMdMNkdidKS89752E472n.jpg"
+        </div>
+   <h3>Sweet Release</h3>
+   <div class = "pelicula">
+            <img class = "poster" src = "https://image.tmdb.org/t/p/w500//4ndp1pnHWRuiZLNpFJvO4Kh6Tav.jpg"
+        </div>
+   <h3>Ruthless</h3>
+   <div class = "pelicula">
+            <img class = "poster" src = "https://image.tmdb.org/t/p/w500//agWt9bJzr2m1HY3A5InxXveUyIe.jpg"
+        </div>
+   <h3>Scoop</h3>
+   <div class = "pelicula">
+            <img class = "poster" src = "https://image.tmdb.org/t/p/w500//y9zzaN65LOO56nUGC31x9mWQzoi.jpg"
+        </div>
+   <h3>Miller's Girl</h3>
+   <div class = "pelicula">
+            <img class = "poster" src = "https://image.tmdb.org/t/p/w500//qsdjk9oAKSQMWs0Vt5Pyfh6O4GZ.jpg"
+        </div>
+   <h3>Turning Red</h3>
+   <div class = "pelicula">
+            <img class = "poster" src = "https://image.tmdb.org/t/p/w500//2J5eeroLDY0d45mVjpuGhcLZs3W.jpg"
+        </div>
+   <h3>The Thundermans Return</h3>
+   <div class = "pelicula">
+            <img class = "poster" src = "https://image.tmdb.org/t/p/w500//hUu9zyZmDd8VZegKi1iK1Vk0RYS.jpg"
+        </div>
+   <h3>The Zone of Interest</h3>
+   <div class = "pelicula">
+            <img class = "poster" src = "https://image.tmdb.org/t/p/w500//pQYHouPsDw32FhDLr7E3jmw0WTk.jpg"
+        </div>
+   <h3>파묘</h3>
+   <div class = "pelicula">
+            <img class = "poster" src = "https://image.tmdb.org/t/p/w500//1ZHetsKD44xB63ZjTjqryC0CtoL.jpg"
+        </div>
+   <h3>The Casagrandes Movie</h3>
+   <div class = "pelicula">
+            <img class = "poster" src = "https://image.tmdb.org/t/p/w500//vfEG79SQIg3p6B8rBLVeIo2BBhb.jpg"
+        </div>
+   <h3>Red Right Hand</h3>
+   <div class = "pelicula">
+            <img class = "poster" src = "https://image.tmdb.org/t/p/w500//bnOz6hfBTOIDYyrj8P3Pcj4uVzE.jpg"
+        </div>
+   <h3>Kalikot</h3>
+   <div class = "pelicula">
+            <img class = "poster" src = "https://image.tmdb.org/t/p/w500//rUPJfjfNEbANXQrmCQfurOppqrA.jpg"
+        </div>
+   <h3>Robot Dreams</h3>
+   <div class = "pelicula">
+            <img class = "poster" src = "https://image.tmdb.org/t/p/w500//gavGnAMTXPkpoFgG0stwgIgKb64.jpg"
+        </div>
+   <h3>Drive-Away Dolls</h3>
+   <div class = "pelicula">
+            <img class = "poster" src = "https://image.tmdb.org/t/p/w500//mKWalirPreEdCKDJjc5TKeOP2xi.jpg"
+        </div>
+   <h3>Bob Marley: One Love</h3>
+   <div class = "pelicula">
+            <img class = "poster" src = "https://image.tmdb.org/t/p/w500//gxVcBc4VM0kAg9wX4HVg6KJHG46.jpg"
+        </div>
+   <h3>Arthur the King</h3>
+   <div class = "pelicula">
+            <img class = "poster" src = "https://image.tmdb.org/t/p/w500//niVtvS9Kf8G1VDPSqurqHkaSSwm.jpg"
+        </div>
+   <h3>Romantik Hırsız</h3>
+   <div class = "pelicula">
+            <img class = "poster" src = "https://image.tmdb.org/t/p/w500//wCXd5tpUSc12LVPd2oN9OKU1EVQ.jpg"
+        </div>
+   <h3>Snack Shack</h3>
+   <div class = "pelicula">
+            <img class = "poster" src = "https://image.tmdb.org/t/p/w500//yZGdlrKxglrWciRl0Rs6lAjfPHM.jpg"
+        </div>
+   <h3>Dogman</h3>
+   <div class = "pelicula">
+            <img class = "poster" src = "https://image.tmdb.org/t/p/w500//36pYugctLa70NmwMEgXTR1G31Kq.jpg"
+        </div>
+   <h3>The Bricklayer</h3>
+   <div class = "pelicula">
+            <img class = "poster" src = "https://image.tmdb.org/t/p/w500//kQs6keheMwCxJxrzV83VUwFtHkB.jpg"
+        </div>
+   <h3>Anatomie d'une chute</h3>
+   <div class = "pelicula">
+            <img class = "poster" src = "https://image.tmdb.org/t/p/w500//b4fn3VIdVTT3SX0rFMNFbl5xuvg.jpg"
+        </div>
+   <h3>Monkey Man</h3>
+   <div class = "pelicula">
+            <img class = "poster" src = "https://image.tmdb.org/t/p/w500//yvnIWt2j8VnDgwKJE2VMiFMa2Qo.jpg"
+        </div>
+   <h3>One Life</h3>
+   <div class = "pelicula">
+            <img class = "poster" src = "https://image.tmdb.org/t/p/w500//hHUt5WCaNNeZNPnjbZiaZX2xtxl.jpg"
+        </div>
+   <h3>Back to Black</h3>
+   <div class = "pelicula">
+            <img class = "poster" src = "https://image.tmdb.org/t/p/w500//kWXA6PfQ0PpZpoCXoeBFRciRrUw.jpg"
+        </div>
+   <h3>Das Lehrerzimmer</h3>
+   <div class = "pelicula">
+            <img class = "poster" src = "https://image.tmdb.org/t/p/w500//t9GEcmN1ihe4qsGmhIEGvHT9ywY.jpg"
+        </div>
+   <h3>더 와일드: 야수들의 전쟁</h3>
+   <div class = "pelicula">
+            <img class = "poster" src = "https://image.tmdb.org/t/p/w500//aiw8k5wXSCkueUD7eavmnNtaQFO.jpg"
+        </div>
+   <h3>Leave</h3>
+   <div class = "pelicula">
+            <img class = "poster" src = "https://image.tmdb.org/t/p/w500//fbbj3viSUDEGT1fFFMNpHP1iUjw.jpg"
+        </div>
+   <h3>Mean Girls</h3>
+   <div class = "pelicula">
+            <img class = "poster" src = "https://image.tmdb.org/t/p/w500//2sADrLwMQof6yYmrJRSa04tFZuS.jpg"
+        </div>
+   <h3>Winnie-the-Pooh: Blood and Honey 2</h3>
+   <div class = "pelicula">
+            <img class = "poster" src = "https://image.tmdb.org/t/p/w500//mlGjb0Cku6EVYNg1VM0cddwIgkX.jpg"
+        </div>
+   <h3>Nic na siłę</h3>
+   <div class = "pelicula">
+            <img class = "poster" src = "https://image.tmdb.org/t/p/w500//2lG18RqCK8qTk7R5jA1L7ZRMWXu.jpg"
+        </div>
+   <h3>She Came to Me</h3>
+   <div class = "pelicula">
+            <img class = "poster" src = "https://image.tmdb.org/t/p/w500//pB8BM7pdSp6B6Ih7QZ4DrQ3PmJK.jpg"
+        </div>
+   <h3>Fight Club</h3>
+  </div>
+   </body>
+  </html>
