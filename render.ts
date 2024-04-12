@@ -1,6 +1,6 @@
 import { pelisCartelera } from "./movielist.js";
 
-const contentHead =  (title:string) => `
+const contentHead = (title: string) => `
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,14 +16,14 @@ body{
     background-color: rgb(10, 28, 58);;
 }
 .titulo{
+    width: 100%;
     position: fixed;
     top: 0;
     text-align: center;    
-    margin: 0rem 6rem 0rem 6rem;
     border: #ffffff;
     font-size: 3rem;
-    background: goldenrod;
-    color: #fffcfc;
+    background: rgb(101, 110, 105);
+    color: goldenrod
 
 }
 .contenedor {
@@ -87,18 +87,76 @@ export const render = () => {
 
 const movi = await pelisCartelera();
 
-
-
 const addTitle = () => {
-   let movieName = '';
-   movi.forEach(m => {
-   movieName += `
+  let movieName = '';
+  movi.forEach((m, index) => {
+    movieName += `
    <div class = "pelicula">
-            <img class = "poster" src = "https://image.tmdb.org/t/p/w500/${m.poster_path}"
-        </div>
-   <h3>${m.original_title}</h3>`
- });
- return movieName
+            <a href=movie_${index}.html>
+            <img class = "poster" src = "https://image.tmdb.org/t/p/w500/${m.poster_path}">
+            </a>
+         <h3>${m.original_title}</h3>
+        <h3>Score:${m.vote_average}</h3>
+      </div>`
+
+  });
+  return movieName
 }
 
-console.log(render());
+const otherHead = (title: string) => `
+head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+    background-color: rgb(209, 121, 38);;
+}
+.resumen{
+
+    border-width: 5px;
+    border-style: solid;
+    border-color: bisque;
+    padding-left: 90px;
+    box-sizing: content-box;
+    margin-left: 200px;
+}
+
+.resumen p{
+    font-size: 25px; 
+
+}
+</style>
+</head>
+`;
+
+const addInfo = () => {
+  let movieInfo = '';
+  movi.forEach((m, index) => {
+    movieName += `
+   <div class = "resumen>
+            <img class = "poster" src = "https://image.tmdb.org/t/p/w500/${m.poster_path}">
+         <h3>Overview</h3>   
+         <p>${m.overview}</p>
+        
+      </div>`
+
+  });
+  return movieInfo
+}
+
+export const renderHTMLs = () => {
+  return `<html>
+  ${contentHead("Pel·lícules en cartellera")}
+  <body>
+  ${addTitle()}
+  </body>
+  </html>`
+
+};
+
+
+// for (let i = 0; i<=movi.length; i++){
+//   console.log(`pelicula_${i}.html`);
+// }
+
