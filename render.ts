@@ -100,14 +100,14 @@ const addTitle = () => {
       </div>`
 
   });
-  return movieName
+  return movieName;
 }
 
 const otherHead = (title: string) => `
-head>
+    <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>${title}</title>
     <style>
         body{
     background-color: rgb(209, 121, 38);;
@@ -130,28 +130,81 @@ head>
 </head>
 `;
 
-const addInfo = () => {
-  let movieInfo = '';
-  movi.forEach((m, index) => {
-    movieName += `
-   <div class = "resumen>
-            <img class = "poster" src = "https://image.tmdb.org/t/p/w500/${m.poster_path}">
-         <h3>Overview</h3>   
-         <p>${m.overview}</p>
+// const addInfo = () => {
+//   let movieInfo = '';
+//   movi.forEach((m, index) => {
+//     movieInfo += `
+//    <div class = "resumen>
+//             <img class = "poster" src = "https://image.tmdb.org/t/p/w500/${m.poster_path}">
+//          <h3>Overview</h3>   
+//          <p>${m.overview}</p>
         
-      </div>`
+//       </div>`
 
-  });
-  return movieInfo
+//   });
+//   return movieInfo;
+// }
+
+const addInfo = (resum: string) => {
+  return `
+      <div class = "resumen>
+               <img class = "poster" src = "https://image.tmdb.org/t/p/w500/${m.poster_path}">
+            <h3>Overview</h3>   
+            <p>${resum}}</p>
+          
+         </div>`
 }
 
-export const renderHTMLs = () => {
+
+export const subHTMLs = (title: string, resum:string ) => {
   return `<html>
-  ${contentHead("Pel·lícules en cartellera")}
-  <body>
-  ${addTitle()}
-  </body>
-  </html>`
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>${title}</title>
+    <style>
+        body{
+    background-color: rgb(209, 121, 38);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.titulo_pelicula{
+    width: 100%;
+    height: 5%;
+    border: 1rem;
+    background: rgb(101, 110, 105);
+    border: 0;
+    text-align: center;
+    display: inline-block;
+
+}
+.resumen{
+
+    border-width: 5px;
+    border-style: solid;
+    border-color: bisque;
+    padding-left: 10px;
+    box-sizing: content-box;
+    position: absolute;
+    
+    
+}
+.resumen p{
+    font-size: 25px; 
+}
+</style>
+</head>
+<body>
+    <div id="titulo_pelicula" class="titulo_pelicula">
+        <h1>${title}</h1>
+    </div>
+
+<div id="resumen" class="resumen">
+    <h2>Overview</h2>
+    <p>${resum}</p>
+</div>
+</body>`
 
 };
 
@@ -159,4 +212,9 @@ export const renderHTMLs = () => {
 // for (let i = 0; i<=movi.length; i++){
 //   console.log(`pelicula_${i}.html`);
 // }
+
+export let extHtml = [];
+for (let i = 0; i<movi.length; i++){
+  extHtml.push(subHTMLs(movi[i].original_title, movi[i].overview));
+   }
 
